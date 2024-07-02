@@ -45,16 +45,8 @@ const userSchema= new Schema({
       type:mongoose.Types.ObjectId,
       ref:'User',
     }
-  ],
+  ]
 
-  
-    image: {
-    type: String,
-  },
-  imagePublicId: {
-    type: String,
-  },
-   
 },{timestamps:true})
 
 export const User= mongoose.models.User ?? mongoose.model("User", userSchema)

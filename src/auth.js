@@ -6,7 +6,7 @@ import { User } from "./model/User";
 import bcrypt from "bcryptjs"
 import { dbConnect } from "./utils/dbConnect";
 import { createUser } from "./queries/user";
-import { authConfig } from "./auth.config";
+
 
 
 export const {
@@ -15,7 +15,9 @@ export const {
   signIn,
   signOut,
 } = NextAuth ({
- ...authConfig,
+  session:{
+    strategy:"jwt"
+  },
   providers: [
     GoogleProvider({
       clientId: process.env.AUTH_GOOGLE_ID,

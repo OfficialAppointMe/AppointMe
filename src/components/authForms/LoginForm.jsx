@@ -63,7 +63,7 @@ function LoginForm() {
       if (response.error) {
         setError(response.error.message);
       } else {
-        router.push("/");
+        router.push("/dashboard");
       }
     } catch (error) {
       setError("Check your credentials");

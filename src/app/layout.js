@@ -13,12 +13,12 @@ export const metadata = {
 export default function RootLayout({ children, session }) {
   return (
     <html lang="en">
-      <SessionProvider session={session}>
-        <body className={inter.className}>
+      <body className={inter.className}>
+        <SessionProvider session={session}>
           {children}
           <script src="https://cdn.lordicon.com/lordicon.js"></script>
-        </body>
-      </SessionProvider>
+        </SessionProvider>
+      </body>
     </html>
   );
 }

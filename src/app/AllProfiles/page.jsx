@@ -54,29 +54,22 @@ const AllProfiles = () => {
         placeholder="Search by email"
         className="mb-4 p-2 border border-gray-300 rounded-lg w-full max-w-md"
       />
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center items-center max-h-screen w-screen gap-5 p-2">
         {filteredProfiles.length > 0 ? (
           filteredProfiles.map((profile) => (
             <div
               key={profile._id}
               onClick={() => router.push(`/AllProfiles/${profile._id}`)}
-              className="cursor-pointer bg-white p-6 m-4 rounded-lg flex shadow-md w-80 hover:bg-gray-200 transition"
+              className="bg-white p-2 rounded-lg shadow-lg flex justify-center items-center flex-col w-60 h-52 cursor-pointer hover:scale-105 transition ease-out duration-500"
             >
-              <div className="flex flex-col">
-                <h2 className="text-xl font-bold mb-2">{profile.name}</h2>
-                <p className="text-gray-700">{profile.email}</p>
-              </div>
+
               <img
-                style={{
-                  width: "70px",
-                  height: "70px",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  backgroundColor: "#f0f0f0",
-                }}
-                src={profile.image}
-                alt="image"
-              />
+              src={profile.image}
+              alt="image"
+              className="rounded-full h-14 w-14 bg-black overflow-hidden flex justify-center items-center"/>
+              <h2 className="font-bold">{profile.name}</h2>
+              <p className=" truncate w-40">{profile.email}</p>
+
             </div>
           ))
         ) : (

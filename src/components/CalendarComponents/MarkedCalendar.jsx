@@ -37,17 +37,21 @@ function MarkedCalendar({ email }) {
   // Custom CSS to style the calendar
   const calendarStyles = `
     .rbc-month-header {
-      background-color: red !important; /* Red background for day names */
+      background-color: #0C0C0C !important; /* Red background for day names */
       color: white !important;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
 
     .rbc-row-bg {
-      background-color: blue !important; /* Blue background for dates */
-      color: white !important;
+      background-color: rgb(110, 231, 201) !important; /* Blue background for dates */
+      // color: white !important;
       cursor:default;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
       .rbc-row-content{
-            color: white !important;
+            // color: white !important;
         cursor:arrow;
       }
      
@@ -57,13 +61,17 @@ function MarkedCalendar({ email }) {
     }
     
     .rbc-today{
-          background-color: orange !important; /* Blue background for dates */
+          background-color: rgb(104, 182, 204) !important; /* Blue background for dates */
 
+    }
+    
+    .rbc-month-view{
+          border-radius: 10px
     }
   `;
 
   return (
-    <div style={{ height: '400px', width: '400px' }}>
+    <div className='w-[100%] h-full'>
       <style jsx>{calendarStyles}</style>
       <Calendar
         localizer={localizer}

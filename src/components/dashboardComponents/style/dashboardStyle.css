@@ -1,0 +1,60 @@
+.navigation_main_div{
+    @media (max-width: 426px) {
+        display: none;
+    }
+}
+
+.only_profile_div{
+    @media (max-width: 426px) {
+        display: none;
+    }
+}
+
+.content_and_profile_div{
+    @media (max-width: 426px) {
+        flex-direction: column;
+        height: 100%;
+        overflow: scroll;
+    }
+}
+
+.ultimate_div{
+    @media (max-width: 320px) {
+        overflow: scroll;
+        height: 900px;
+    }
+    @media (max-width: 376px) {
+        overflow: scroll;
+        height: 1000px;
+    }
+    @media (max-width: 426px) {
+        overflow: scroll;
+        height: 1000px;
+    }
+}
+
+.content_main_div{
+    @media (max-width: 426px) {
+        height: 70%;
+        width: 100%;
+    }
+}
+
+.profile_and_calendar_div{
+    @media (max-width: 426px) {
+        height: 30%;
+        width: 100%;
+    }
+}
+
+.only_calendar_div{
+    @media (max-width: 426px) {
+        height: 100%;
+    }
+}
+
+.starred_app_div{
+    @media (max-width: 320px) {
+        height: 20%;
+    }
+}

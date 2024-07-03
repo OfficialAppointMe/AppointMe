@@ -8,7 +8,7 @@ export async function doSocialLogin(formData){
 
   let action = formData.get('action')
   console.log(action);
-  await signIn(action,{redirectTo:"/dashboard"})
+  await signIn(action,{redirectTo:"/"})
 }
 
 export async function doSocialLogout(formData){
